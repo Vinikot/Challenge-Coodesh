@@ -1,13 +1,14 @@
 package com.example;
+import java.text.Normalizer;
 import java.util.Scanner;
 /**
- * 
+ *
  *
  * Task here is to implement a function that says if a given string is
  * palindrome.
- * 
- * 
- * 
+ *
+ *
+ *
  * Definition=> A palindrome is a word, phrase, number, or other sequence of
  * characters which reads the same backward as forward, such as madam or
  * racecar.
@@ -21,11 +22,10 @@ public class TASK1 {
 
         try {
             System.out.printf("Enter a string: ");
-            inputString = read.next().toLowerCase();
+            inputString = unaccent(read.nextLine().toLowerCase());
 
             reverseString = new StringBuilder(inputString);
             reverseString.reverse();
-            System.out.println(reverseString);
 
             if (inputString.equals(reverseString.toString())){
                 System.out.println("The given string is a palindrome.");
@@ -37,5 +37,11 @@ public class TASK1 {
         }
 
     }
- 
+
+    public static String unaccent(String src) {
+        return Normalizer
+                .normalize(src, Normalizer.Form.NFD)
+                .replaceAll("[^\\p{ASCII}]", "");
+    }
+
 }
