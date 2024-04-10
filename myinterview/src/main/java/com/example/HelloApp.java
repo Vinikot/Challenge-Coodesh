@@ -37,6 +37,8 @@ public class HelloApp {
             System.exit(EXIT_STATUS_HELLO_FAILED);
         }
         hi.sayHello(System.out);
+
+        TASK1.isPalindrome();
     }
 
 }
