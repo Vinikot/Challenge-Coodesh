@@ -1,5 +1,21 @@
 package com.example;
 
+import com.amazonaws.auth.AWSStaticCredentialsProvider;
+import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.AmazonS3ClientBuilder;
+import com.amazonaws.services.s3.model.Bucket;
+import com.amazonaws.services.s3.model.ListObjectsV2Request;
+import com.amazonaws.services.s3.model.PutObjectRequest;
+import com.amazonaws.services.s3.model.Region;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
+import java.util.List;
+
 /**
  * A very basic program that demonstrates the use of JUnit tests. The tests include a sample unit test and an
  * integration test.
@@ -16,7 +32,7 @@ public class HelloApp {
      *
      * @param args Arguments passed to this program.
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         int times = DEFAULT_TIMES;
         if (args.length >= 1) {
@@ -38,7 +54,8 @@ public class HelloApp {
         }
         hi.sayHello(System.out);
 
-        TASK1.isPalindrome();
-    }
+        //TASK1.isPalindrome();
+        TASK4.countRecords();
 
+    }
 }

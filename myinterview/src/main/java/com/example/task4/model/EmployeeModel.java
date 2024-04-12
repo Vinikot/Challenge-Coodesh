@@ -4,7 +4,7 @@ public class EmployeeModel {
     private int emp_no;
     private String first_name;
     private String last_name;
-    private char gender;
+    private String gender;
 
     public int getEmp_no() {
         return emp_no;
@@ -30,11 +30,11 @@ public class EmployeeModel {
         this.last_name = last_name;
     }
 
-    public char getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(char gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 }
