@@ -41,9 +41,10 @@ public class HelloApp {
         hi.sayHello(System.out);
 
         //TASK1.isPalindrome();
+        //TASK2.exeTask2();
         //TASK3.printDistinctItens();
         //TASK4.countRecords();
-        TASK5.springInitializer(args);
+        //TASK5.springInitializer(args);
 
     }
 }
