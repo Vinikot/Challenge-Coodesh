@@ -5,13 +5,9 @@ import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.AmazonS3Exception;
-import com.amazonaws.services.s3.model.Bucket;
 import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.amazonaws.services.s3.model.Region;
-import com.example.task4.aws.AWSClientConfig;
 import com.example.task4.model.EmployeeModel;
-import com.example.task4.service.DocumentService;
-import lombok.RequiredArgsConstructor;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -33,7 +29,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Create an implementation of a Rest API client.
@@ -41,7 +36,6 @@ import java.util.List;
  * API endpoint=> https://3ospphrepc.execute-api.us-west-2.amazonaws.com/prod/RDSLambda
  * AWS s3 bucket => interview-digiage
  */
-@RequiredArgsConstructor
 public class TASK4 {
 
     public static ArrayList<EmployeeModel> getEmplyeeFromAPI() throws ClientProtocolException, IOException {
